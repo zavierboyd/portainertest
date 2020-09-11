@@ -1,0 +1,11 @@
+version: '3'
+services:
+    nuxt:
+        build: .
+        image: nuxt
+        volumes:
+            - ./nuxt:/workspace
+        ports:
+            - '80:3000'
+        command: 'nuxt --hostname 0.0.0.0 --port 3000'
+# docker-compose run nuxt create-nuxt-app
